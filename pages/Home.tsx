@@ -64,7 +64,7 @@ const Home: React.FC = () => {
         description="RYLT Energy - Pioneering sustainable heating and dehumidification solutions engineered in India for global efficiency standards." 
       />
       {/* Hero Carousel */}
-      <section className="relative bg-rylt-black text-white h-[600px] md:h-[700px] overflow-hidden group">
+      <section className="relative bg-rylt-black text-white h-[500px] md:h-[600px] overflow-hidden group">
         
         {/* Slides */}
         {HERO_SLIDES.map((slide, index) => (
