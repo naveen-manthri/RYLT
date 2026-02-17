@@ -120,9 +120,14 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">Headquarters</h3>
-                  <p className="text-gray-600 leading-relaxed mt-1 max-w-sm">
+                  <a 
+                    href="https://www.google.com/maps/place/RYLT+ENERGY/@17.4713848,78.5962559,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb9d4f4c101fa9:0xf6b30e81759cbf05!8m2!3d17.4713848!4d78.5962559!16s%2Fg%2F11vb0hvgp9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 leading-relaxed mt-1 max-w-sm block hover:text-rylt-green transition-colors cursor-pointer"
+                  >
                     {COMPANY_INFO.address}
-                  </p>
+                  </a>
                 </div>
               </div>
 
@@ -132,7 +137,12 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">Phone</h3>
-                  <p className="text-gray-600 mt-1">{COMPANY_INFO.phone}</p>
+                  <a 
+                    href={`tel:${COMPANY_INFO.phone.replace(/[^0-9+]/g, '')}`}
+                    className="text-gray-600 mt-1 block hover:text-rylt-green transition-colors cursor-pointer"
+                  >
+                    {COMPANY_INFO.phone}
+                  </a>
                   <p className="text-gray-500 text-sm mt-1">Mon-Fri, 9am - 6pm IST</p>
                 </div>
               </div>
@@ -143,20 +153,29 @@ const Contact: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg">Email</h3>
-                  <p className="text-gray-600 mt-1">{COMPANY_INFO.email}</p>
+                  <a 
+                    href={`mailto:${COMPANY_INFO.email}`}
+                    className="text-gray-600 mt-1 block hover:text-rylt-green transition-colors cursor-pointer"
+                  >
+                    {COMPANY_INFO.email}
+                  </a>
                 </div>
               </div>
             </div>
 
-            {/* Map Placeholder */}
-            <div className="mt-12 w-full h-64 bg-gray-200 rounded-xl overflow-hidden relative">
-               <div className="absolute inset-0 flex items-center justify-center text-gray-500">
-                  <div className="text-center">
-                     <MapPin size={40} className="mx-auto mb-2 opacity-50" />
-                     <span>Map View Placeholder</span>
-                  </div>
-               </div>
-               {/* In production, embed Google Maps iframe here */}
+            {/* Google Maps */}
+            <div className="mt-12 w-full rounded-xl overflow-hidden shadow-md">
+               <iframe 
+                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1902.8780419784437!2d78.59625587773613!3d17.47138481018179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9d4f4c101fa9%3A0xf6b30e81759cbf05!2sRYLT%20ENERGY!5e0!3m2!1sen!2sin!4v1771344444285!5m2!1sen!2sin" 
+                 width="600" 
+                 height="450" 
+                 style={{ border: 0 }}
+                 className="w-full h-80"
+                 allowFullScreen 
+                 loading="lazy" 
+                 referrerPolicy="no-referrer-when-downgrade"
+                 title="RYLT Energy Location"
+               />
             </div>
           </div>
 

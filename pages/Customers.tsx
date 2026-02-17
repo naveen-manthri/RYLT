@@ -2,6 +2,7 @@ import React from 'react';
 import { CUSTOMERS } from '../constants';
 import { Building2, Factory, Warehouse, Trophy } from 'lucide-react';
 import SEO from '../components/SEO';
+import CaseStudy from '../components/CaseStudy';
 
 const Customers: React.FC = () => {
   return (
@@ -34,31 +35,36 @@ const Customers: React.FC = () => {
            ))}
         </div>
 
-        <div className="bg-rylt-black text-white rounded-3xl p-8 md:p-16 relative overflow-hidden">
-            <div className="relative z-10 max-w-3xl">
-              <span className="text-rylt-green font-bold tracking-wider uppercase mb-2 block">Case Study</span>
-              <h2 className="text-3xl font-bold mb-6">Optimizing Chocolate Production</h2>
-              <p className="text-gray-300 mb-8 leading-relaxed">
-                A leading confectionery manufacturer in Maharashtra faced issues with "Sugar Bloom" during the monsoon season. 
-                By installing RYLT Industrial Dehumidifiers (DR900 series), they maintained a constant humidity of 50% RH, 
-                eliminating product rejection and saving ₹20 Lakhs annually in waste reduction.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-gray-700 pt-8">
-                <div>
-                   <p className="text-3xl font-bold text-rylt-green">50%</p>
-                   <p className="text-gray-400 text-sm">Consistent RH maintained</p>
-                </div>
-                <div>
-                   <p className="text-3xl font-bold text-rylt-green">ZERO</p>
-                   <p className="text-gray-400 text-sm">Product Rejection</p>
-                </div>
-                <div>
-                   <p className="text-3xl font-bold text-rylt-green">24/7</p>
-                   <p className="text-gray-400 text-sm">Continuous Operation</p>
-                </div>
-              </div>
-            </div>
-             <div className="absolute right-0 top-0 w-1/2 h-full bg-gradient-to-l from-white/10 to-transparent hidden lg:block"></div>
+        <div className="space-y-12">
+          <CaseStudy
+            title="Enhancing Edible Sheet Quality for Cake Decoration"
+            description="A leading cake decoration solutions provider, Mavee Foods, faced challenges with moisture absorption and sheet curling during edible sheet production. Seasonal humidity fluctuations were affecting print clarity and shelf life. By installing RYLT Industrial Dehumidifiers, Mavee Foods maintained a stable low-humidity environment, ensuring smooth sheets, sharper prints, and extended usability. This resulted in consistent product quality, reduced rejections, and improved customer satisfaction."
+            stats={[
+              { value: "45%", label: "RH consistently maintained" },
+              { value: "ZERO", label: "Sheet deformation" },
+              { value: "IMPROVED", label: "Print finish & shelf life" }
+            ]}
+          />
+
+          <CaseStudy
+            title="Energy-Efficient Pool Heating for All-Season Swimming"
+            description="Dolphin Pools, a premium swimming pool solutions provider, required a reliable and cost-effective heating system to enable year-round pool usage while reducing energy consumption. By deploying RYLT Swimming Pool Heat Pumps, Dolphin Pools achieved fast heating, stable water temperatures, and significant power savings compared to conventional heating methods. The system operates efficiently even during cooler months, enhancing user comfort and operational reliability."
+            stats={[
+              { value: "60-70%", label: "Energy savings" },
+              { value: "STABLE", label: "Consistent water temperature" },
+              { value: "24/7", label: "Reliable pool operation" }
+            ]}
+          />
+
+          <CaseStudy
+            title="Preventing Chocolate Defects with Controlled Humidity"
+            description="Druthi Foods, manufacturers of Gems Chocolates, were experiencing sugar bloom and surface defects due to high humidity during monsoon seasons. These issues led to increased product rejection and wastage. With the installation of RYLT Industrial Dehumidifiers, Druthi Foods stabilized the production environment, eliminating moisture-related defects. This ensured uniform chocolate appearance, improved shelf life, and reduced operational losses."
+            stats={[
+              { value: "40%", label: "RH maintained across production" },
+              { value: "ZERO", label: "Sugar bloom defects" },
+              { value: "REDUCED", label: "Waste & rework" }
+            ]}
+          />
         </div>
       </div>
     </div>

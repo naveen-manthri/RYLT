@@ -1,142 +1,361 @@
-import { Product, TeamMember, Customer } from './types';
+import { Product, TeamMember, Customer } from "./types";
 
 export const COMPANY_INFO = {
-  address: "CIA Office Complex, Main Road, Sector - III, I.D.A Phase-II, Near Prof. Jaya Sankar Circle, Cherlapally, R.R.District, Secunderabad, Telangana 500051",
+  address:
+    "CIA Office Complex, Main Road, Sector - III, I.D.A Phase-II, Near Prof. Jaya Sankar Circle, Cherlapally, R.R.District, Secunderabad, Telangana 500051",
   phone: "+91-94414 02957",
   email: "info@ryltenergy.com",
   tagline: "Redefine Your Life With Technology",
-  vision: "To be a pioneer in sustainable and innovative heating solutions, transforming every space into a comfortable and energy-efficient environment.",
-  mission: "To design and deliver advanced HVAC-based heating solutions that combine reliability, efficiency, and innovation, reducing energy consumption while enhancing comfort."
+  vision:
+    "To be a pioneer in sustainable and innovative heating solutions, transforming every space into a comfortable and energy-efficient environment.",
+  mission:
+    "To design and deliver advanced HVAC-based heating solutions that combine reliability, efficiency, and innovation, reducing energy consumption while enhancing comfort.",
 };
 
 // Updated images to be more relevant/fresh
 export const PRODUCTS: Product[] = [
   {
-    id: 'pool-heat-pump',
-    title: 'Swimming Pool Heat Pump',
+    id: "pool-heat-pump",
+    title: "Swimming Pool Heat Pump",
+    category: "Heating",
+    description:
+      "Advanced air-source refrigeration cycle technology designed to deliver efficient and eco-friendly pool heating. Saves up to 70% energy compared to traditional electric or gas heaters.",
+    image: "https://picsum.photos/id/10/800/600", // Nature/Water vibe
+    features: [
+      "Titanium Tube Heat Exchanger (Corrosion Resistant)",
+      "Smart Wi-Fi Controller",
+      "Works in all Indian Climates (Hot, Humid, Cold)",
+      "Low Noise Operation",
+      "R410A/R32 Eco-friendly Refrigerant",
+    ],
+    applications: [
+      "Residential Swimming Pools",
+      "Hotels & Resorts",
+      "Sports Clubs & Gyms",
+      "Indoor Pools",
+    ],
+    models: [
+      {
+        name: "27kW",
+        specs: [
+          { label: "Rated Input Power", value: "3.9 kW" },
+          { label: "Power Supply", value: "415/3/50 V/Ph/Hz" },
+          { label: "COP", value: "6.3 w/w" },
+          { label: "Compressor Type", value: "Scroll" },
+          { label: "Number of Compressors", value: "01" },
+          { label: "Number of Fans", value: "01" },
+          { label: "Total Input Power to Fan", value: "180 W" },
+          { label: "Heat Exchanger", value: "Titanium Tube Heat Exchanger" },
+          { label: "Refrigerant", value: "R407C/R410A/R32" },
+          { label: "Noise", value: "55 dB(A)" },
+          { label: "Water Flow Volume", value: "12 m³/h" },
+          { label: "Unit Size", value: "1000 x 700 x 700 mm" },
+          { label: "Net Weight", value: "140 kg" },
+        ],
+      },
+      {
+        name: "40kW",
+        specs: [
+          { label: "Rated Input Power", value: "7.8 kW" },
+          { label: "Power Supply", value: "415/3/50 V/Ph/Hz" },
+          { label: "COP", value: "5.1 w/w" },
+          { label: "Compressor Type", value: "Scroll" },
+          { label: "Number of Compressors", value: "01" },
+          { label: "Number of Fans", value: "01" },
+          { label: "Total Input Power to Fan", value: "600 W" },
+          { label: "Heat Exchanger", value: "Titanium Tube Heat Exchanger" },
+          { label: "Refrigerant", value: "R407C/R410A/R32" },
+          { label: "Noise", value: "58 dB(A)" },
+          { label: "Water Flow Volume", value: "20 m³/h" },
+          { label: "Unit Size", value: "1000 x 700 x 700 mm" },
+          { label: "Net Weight", value: "160 kg" },
+        ],
+      },
+      {
+        name: "54kW",
+        specs: [
+          { label: "Rated Input Power", value: "8.1 kW" },
+          { label: "Power Supply", value: "415/3/50 V/Ph/Hz" },
+          { label: "COP", value: "6.1 w/w" },
+          { label: "Compressor Type", value: "Scroll" },
+          { label: "Number of Compressors", value: "02" },
+          { label: "Number of Fans", value: "02" },
+          { label: "Total Input Power to Fan", value: "380 W" },
+          { label: "Heat Exchanger", value: "Titanium Tube Heat Exchanger" },
+          { label: "Refrigerant", value: "R407C/R410A/R32" },
+          { label: "Noise", value: "66 dB(A)" },
+          { label: "Water Flow Volume", value: "12 m³/h" },
+          { label: "Unit Size", value: "1000 x 1000 x 700 mm" },
+          { label: "Net Weight", value: "280 kg" },
+        ],
+      },
+      {
+        name: "80kW",
+        specs: [
+          { label: "Rated Input Power", value: "15.5 kW" },
+          { label: "Power Supply", value: "415/3/50 V/Ph/Hz" },
+          { label: "COP", value: "5.1 w/w" },
+          { label: "Compressor Type", value: "Scroll" },
+          { label: "Number of Compressors", value: "02" },
+          { label: "Number of Fans", value: "02" },
+          { label: "Total Input Power to Fan", value: "1220 W" },
+          { label: "Heat Exchanger", value: "Titanium Tube Heat Exchanger" },
+          { label: "Refrigerant", value: "R407C/R410A/R32" },
+          { label: "Noise", value: "68 dB(A)" },
+          { label: "Water Flow Volume", value: "20 m³/h" },
+          { label: "Unit Size", value: "1000 x 1000 x 700 mm" },
+          { label: "Net Weight", value: "300 kg" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "industrial-dehumidifier",
+    title: "Industrial Dehumidifier (Food & Pharma)",
+    category: "Dehumidification",
+    description:
+      "Specialized dehumidifiers designed for the food and confectionery industry. Prevents moisture damage, stickiness, and sugar bloom in chocolates and candies.",
+    image: "https://picsum.photos/id/866/800/600", // Industrial/clean vibe
+    features: [
+      "Prevents Sugar/Fat Bloom",
+      "Food-Safe Materials",
+      "High Capacity Moisture Removal",
+      "Energy Efficient Scroll Compressors",
+      "Precise Humidity Control",
+    ],
+    applications: [
+      "Chocolate Factories",
+      "Candy & Gems Production",
+      "Food Packaging Areas",
+      "Warehouses & Cold Storage",
+      "Pharmaceutical Units",
+    ],
+    models: [
+      {
+        name: "DR450",
+        specs: [
+          { label: "Dehumidification @ 30°C - 80% RH", value: "437 L/24h" },
+          { label: "Dehumidification @ 20°C - 60% RH", value: "203 L/24h" },
+          { label: "Air Circulation", value: "3000 m³/h" },
+          { label: "Number of Compressors", value: "01" },
+          { label: "Type of Compressor", value: "Scroll" },
+          { label: "Number of Fans", value: "01" },
+          { label: "Type of Fan", value: "Axial" },
+          { label: "Nominal Power Consumption", value: "4.9 kW" },
+          { label: "Maximum Current Consumption", value: "9 A" },
+          { label: "Operating Range - Humidity", value: "40-99% RH" },
+          { label: "Operating Range - Temperature", value: "15-36°C" },
+          { label: "Voltage Supply", value: "400/3/50 V/Ph/Hz" },
+          { label: "Sound Pressure Level", value: "63 dB(A)" },
+          { label: "Refrigerant", value: "R410A/R407c/R134a" },
+          { label: "Dimensions (H x W x D)", value: "1000 x 700 x 700 mm" },
+          { label: "Weight", value: "148 kg" },
+        ],
+      },
+      {
+        name: "DR700",
+        specs: [
+          { label: "Dehumidification @ 30°C - 80% RH", value: "692 L/24h" },
+          { label: "Dehumidification @ 20°C - 60% RH", value: "352 L/24h" },
+          { label: "Air Circulation", value: "3500 m³/h" },
+          { label: "Number of Compressors", value: "01" },
+          { label: "Type of Compressor", value: "Scroll" },
+          { label: "Number of Fans", value: "01" },
+          { label: "Type of Fan", value: "Axial" },
+          { label: "Nominal Power Consumption", value: "7.16 kW" },
+          { label: "Maximum Current Consumption", value: "14.3 A" },
+          { label: "Operating Range - Humidity", value: "40-99% RH" },
+          { label: "Operating Range - Temperature", value: "15-36°C" },
+          { label: "Voltage Supply", value: "400/3/50 V/Ph/Hz" },
+          { label: "Sound Pressure Level", value: "65 dB(A)" },
+          { label: "Refrigerant", value: "R410A/R407c/R134a" },
+          { label: "Dimensions (H x W x D)", value: "1000 x 1200 x 700 mm" },
+          { label: "Weight", value: "230 kg" },
+        ],
+      },
+      {
+        name: "DR900",
+        specs: [
+          { label: "Dehumidification @ 30°C - 80% RH", value: "874 L/24h" },
+          { label: "Dehumidification @ 20°C - 60% RH", value: "406 L/24h" },
+          { label: "Air Circulation", value: "6000 m³/h" },
+          { label: "Number of Compressors", value: "02" },
+          { label: "Type of Compressor", value: "Scroll" },
+          { label: "Number of Fans", value: "02" },
+          { label: "Type of Fan", value: "Axial" },
+          { label: "Nominal Power Consumption", value: "9.8 kW" },
+          { label: "Maximum Current Consumption", value: "18 A" },
+          { label: "Operating Range - Humidity", value: "40-99% RH" },
+          { label: "Operating Range - Temperature", value: "15-36°C" },
+          { label: "Voltage Supply", value: "400/3/50 V/Ph/Hz" },
+          { label: "Sound Pressure Level", value: "63 dB(A)" },
+          { label: "Refrigerant", value: "R410A/R407c/R134a" },
+          { label: "Dimensions (H x W x D)", value: "1000 x 1200 x 700 mm" },
+          { label: "Weight", value: "290 kg" },
+        ],
+      },
+      {
+        name: "DR1150",
+        specs: [
+          { label: "Dehumidification @ 30°C - 80% RH", value: "1129 L/24h" },
+          { label: "Dehumidification @ 20°C - 60% RH", value: "609 L/24h" },
+          { label: "Air Circulation", value: "6500 m³/h" },
+          { label: "Number of Compressors", value: "02" },
+          { label: "Type of Compressor", value: "Scroll" },
+          { label: "Number of Fans", value: "02" },
+          { label: "Type of Fan", value: "Axial" },
+          { label: "Nominal Power Consumption", value: "12.06 kW" },
+          { label: "Maximum Current Consumption", value: "23.3 A" },
+          { label: "Operating Range - Humidity", value: "40-99% RH" },
+          { label: "Operating Range - Temperature", value: "15-36°C" },
+          { label: "Voltage Supply", value: "400/3/50 V/Ph/Hz" },
+          { label: "Sound Pressure Level", value: "65 dB(A)" },
+          { label: "Refrigerant", value: "R410A/R407c/R134a" },
+          { label: "Dimensions (H x W x D)", value: "1000 x 1600 x 700 mm" },
+          { label: "Weight", value: "290 kg" },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'commercial-heat-pump',
+    title: 'Commercial Heat Pump',
     category: 'Heating',
-    description: 'Advanced air-source refrigeration cycle technology designed to deliver efficient and eco-friendly pool heating. Saves up to 70% energy compared to traditional electric or gas heaters.',
-    image: 'https://picsum.photos/id/10/800/600', // Nature/Water vibe
-    features: [
-      'Titanium Tube Heat Exchanger (Corrosion Resistant)',
-      'Smart Wi-Fi Controller',
-      'Works in all Indian Climates (Hot, Humid, Cold)',
-      'Low Noise Operation',
-      'R410A/R32 Eco-friendly Refrigerant'
-    ],
-    applications: [
-      'Residential Swimming Pools',
-      'Hotels & Resorts',
-      'Sports Clubs & Gyms',
-      'Indoor Pools'
-    ],
-    models: [
-      {
-        name: 'RYLT-27kW',
-        specs: [
-          { label: 'Rated Input Power', value: '3.9 kW' },
-          { label: 'COP', value: '6.3' },
-          { label: 'Water Flow', value: '12 m³/h' },
-          { label: 'Net Weight', value: '140 kg' }
-        ]
-      },
-      {
-        name: 'RYLT-40kW',
-        specs: [
-          { label: 'Rated Input Power', value: '7.8 kW' },
-          { label: 'COP', value: '5.1' },
-          { label: 'Water Flow', value: '20 m³/h' },
-          { label: 'Net Weight', value: '160 kg' }
-        ]
-      },
-       {
-        name: 'RYLT-80kW',
-        specs: [
-          { label: 'Rated Input Power', value: '15.5 kW' },
-          { label: 'COP', value: '5.1' },
-          { label: 'Water Flow', value: '20 m³/h' },
-          { label: 'Net Weight', value: '300 kg' }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'industrial-dehumidifier',
-    title: 'Industrial Dehumidifier (Food & Pharma)',
-    category: 'Dehumidification',
-    description: 'Specialized dehumidifiers designed for the food and confectionery industry. Prevents moisture damage, stickiness, and sugar bloom in chocolates and candies.',
-    image: 'https://picsum.photos/id/866/800/600', // Industrial/clean vibe
-    features: [
-      'Prevents Sugar/Fat Bloom',
-      'Food-Safe Materials',
-      'High Capacity Moisture Removal',
-      'Energy Efficient Scroll Compressors',
-      'Precise Humidity Control'
-    ],
-    applications: [
-      'Chocolate Factories',
-      'Candy & Gems Production',
-      'Food Packaging Areas',
-      'Warehouses & Cold Storage',
-      'Pharmaceutical Units'
-    ],
-    models: [
-      {
-        name: 'DR450',
-        specs: [
-          { label: 'Dehumidification (30°C/80%)', value: '437 L/24h' },
-          { label: 'Air Circulation', value: '3000 m³/h' },
-          { label: 'Power Consumption', value: '4.9 kW' }
-        ]
-      },
-      {
-        name: 'DR1150',
-        specs: [
-          { label: 'Dehumidification (30°C/80%)', value: '1129 L/24h' },
-          { label: 'Air Circulation', value: '6500 m³/h' },
-          { label: 'Power Consumption', value: '12.06 kW' }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'advanced-dehumidifier',
-    title: 'Advanced Dehumidification Solution (RYLT-80)',
-    category: 'Dehumidification',
-    description: 'High-performance drying solution designed for demanding industrial applications requiring specific temperature and humidity maintenance (35°C & 36% RH).',
+    description:
+      'Energy-efficient commercial heat pump water heating system designed for hostels, hospitals, lodges, restaurants and spa facilities. Operates in ambient temperatures from 15°C to 55°C with maximum water temperature up to 75°C and delivers high COP up to 5.0 for maximum savings.',
     image: 'https://picsum.photos/id/60/800/600', // Tech/Office/Clean vibe
     features: [
-      'Removes 82kg water/12h (Single Unit)',
-      'Wi-Fi Enabled Monitoring',
-      'Automatic Defrost & Memory Restart',
-      'Portable Roto-molded Housing',
-      '12 Months Warranty'
+      'Save up to 60% on hot water bills',
+      'High COP up to 5.0',
+      'Maximum water temperature up to 75°C',
+      'Ambient operating temperature: 15°C to 55°C',
+      'Scroll/Copeland/Danfoss compressor',
+      'Co-axial tube-in-tube heat exchanger',
+      'Eco-friendly refrigerants (R407C / R404A / R134a)',
+      '415V / 3 Phase / 50Hz power supply',
+      'Available in 600, 1000, and 1200 L/Hr capacities',
     ],
     applications: [
-      'Industrial Drying Processes',
-      'Paper/Sheet Drying',
-      'Sensitive Material Storage'
+      'Hostels',
+      'Hospitals',
+      'Lodges',
+      'Restaurants',
+      'Spa',
+      'Commercial Buildings',
     ],
     models: [
       {
-        name: 'RYLT-80',
+        name: 'RHP-600',
         specs: [
-          { label: 'Capacity', value: '7 L/H' },
-          { label: 'Power Input', value: '5 kW' },
-          { label: 'COP', value: 'Up to 4.0' },
-          { label: 'Dimensions', value: '900 x 700 x 900 mm' }
-        ]
+          { label: 'Water Output', value: '600 L/Hr' },
+          { label: 'Max Water Temperature', value: '60°C' },
+          { label: 'Rated Input Power', value: '5.6 kW' },
+          { label: 'Rated Heat Output', value: '24.5 kW' },
+          { label: 'Power Supply', value: '415V / 3 Phase / 50Hz' },
+          { label: 'COP', value: '4.3' },
+          { label: 'Compressor Type', value: 'Scroll / Copeland / Danfoss' },
+          { label: 'Number of Compressors', value: '1' },
+          { label: 'Total Input Power to Fan', value: '180 W' },
+          { label: 'Heat Exchanger', value: 'Co-axial Tube in Tube Heat Exchanger' },
+          { label: 'Refrigerant', value: 'R407C / R404A / R134a' },
+          { label: 'Unit Size', value: '1000 x 700 x 700 mm' },
+          { label: 'Net Weight', value: '140 kg' },
+        ],
       },
       {
-        name: 'RYLT-240',
+        name: 'RHP-1000',
         specs: [
-          { label: 'Capacity', value: '22 L/H' },
-          { label: 'Warranty', value: '12 Months' },
-          { label: 'Control', value: 'Wi-Fi Smart Control' },
-        ]
-      }
-    ]
-  }
+          { label: 'Water Output', value: '1000 L/Hr' },
+          { label: 'Max Water Temperature', value: '60°C' },
+          { label: 'Rated Input Power', value: '8 kW' },
+          { label: 'Rated Heat Output', value: '42 kW' },
+          { label: 'Power Supply', value: '415V / 3 Phase / 50Hz' },
+          { label: 'COP', value: '5.0' },
+          { label: 'Compressor Type', value: 'Scroll / Copeland / Danfoss' },
+          { label: 'Number of Compressors', value: '1' },
+          { label: 'Total Input Power to Fan', value: '250 W' },
+          { label: 'Heat Exchanger', value: 'Co-axial Tube in Tube Heat Exchanger' },
+          { label: 'Refrigerant', value: 'R407C / R404A / R134a' },
+          { label: 'Unit Size', value: '1000 x 700 x 700 mm' },
+          { label: 'Net Weight', value: '160 kg' },
+        ],
+      },
+      {
+        name: 'RHP-1200',
+        specs: [
+          { label: 'Water Output', value: '1200 L/Hr' },
+          { label: 'Max Water Temperature', value: '60°C' },
+          { label: 'Rated Input Power', value: '11.6 kW' },
+          { label: 'Rated Heat Output', value: '49 kW' },
+          { label: 'Power Supply', value: '415V / 3 Phase / 50Hz' },
+          { label: 'COP', value: '4.2' },
+          { label: 'Compressor Type', value: 'Scroll / Copeland / Danfoss' },
+          { label: 'Number of Compressors', value: '2' },
+          { label: 'Total Input Power to Fan', value: '360 W' },
+          { label: 'Heat Exchanger', value: 'Co-axial Tube in Tube Heat Exchanger' },
+          { label: 'Refrigerant', value: 'R407C / R404A / R134a' },
+          { label: 'Unit Size', value: '1000 x 1000 x 700 mm' },
+          { label: 'Net Weight', value: '250 kg' },
+        ],
+      },
+      {
+        name: 'RHP-1000 (High Temp 75°C)',
+        specs: [
+          { label: 'Water Output', value: '1000 L/Hr' },
+          { label: 'Max Water Temperature', value: '75°C' },
+          { label: 'Rated Input Power', value: '9 kW' },
+          { label: 'Rated Heat Output', value: '42 kW' },
+          { label: 'Power Supply', value: '415V / 3 Phase / 50Hz' },
+          { label: 'COP', value: '4.8' },
+          { label: 'Compressor Type', value: 'Scroll / Copeland / Danfoss' },
+          { label: 'Number of Compressors', value: '2' },
+          { label: 'Total Input Power to Fan', value: '360 W' },
+          { label: 'Heat Exchanger', value: 'Co-axial Tube in Tube Heat Exchanger' },
+          { label: 'Refrigerant', value: 'R407C / R404A / R134a' },
+          { label: 'Unit Size', value: '1000 x 1000 x 700 mm' },
+          { label: 'Net Weight', value: '200 kg' },
+        ],
+      },
+    ],
+  },
+  // {
+  //   id: 'advanced-dehumidifier',
+  //   title: 'Advanced Dehumidification Solution (RYLT-80)',
+  //   category: 'Dehumidification',
+  //   description: 'High-performance drying solution designed for demanding industrial applications requiring specific temperature and humidity maintenance (35°C & 36% RH).',
+  //   image: 'https://picsum.photos/id/60/800/600', // Tech/Office/Clean vibe
+  //   features: [
+  //     'Removes 82kg water/12h (Single Unit)',
+  //     'Wi-Fi Enabled Monitoring',
+  //     'Automatic Defrost & Memory Restart',
+  //     'Portable Roto-molded Housing',
+  //     '12 Months Warranty'
+  //   ],
+  //   applications: [
+  //     'Industrial Drying Processes',
+  //     'Paper/Sheet Drying',
+  //     'Sensitive Material Storage'
+  //   ],
+  //   models: [
+  //     {
+  //       name: 'RYLT-80',
+  //       specs: [
+  //         { label: 'Capacity', value: '7 L/H' },
+  //         { label: 'Power Input', value: '5 kW' },
+  //         { label: 'COP', value: 'Up to 4.0' },
+  //         { label: 'Dimensions', value: '900 x 700 x 900 mm' }
+  //       ]
+  //     },
+  //     {
+  //       name: 'RYLT-240',
+  //       specs: [
+  //         { label: 'Capacity', value: '22 L/H' },
+  //         { label: 'Warranty', value: '12 Months' },
+  //         { label: 'Control', value: 'Wi-Fi Smart Control' },
+  //       ]
+  //     }
+  //   ]
+  // }
 ];
 
 export const TEAM: TeamMember[] = [
@@ -145,36 +364,66 @@ export const TEAM: TeamMember[] = [
     name: "Engineering Lead",
     role: "Head of R&D",
     bio: "Expert in thermodynamic systems with 15+ years in HVAC innovation.",
-    image: "https://picsum.photos/id/1062/400/400"
+    image: "https://picsum.photos/id/1062/400/400",
   },
   {
     id: 2,
     name: "Operations Manager",
     role: "Production Head",
     bio: "Ensures global quality standards and 'Make in India' excellence.",
-    image: "https://picsum.photos/id/338/400/400"
+    image: "https://picsum.photos/id/338/400/400",
   },
   {
     id: 3,
     name: "Sales Director",
     role: "Customer Success",
     bio: "Dedicated to providing tailored energy solutions for industrial clients.",
-    image: "https://picsum.photos/id/669/400/400"
-  }
+    image: "https://picsum.photos/id/669/400/400",
+  },
 ];
 
 export const CUSTOMERS: Customer[] = [
   { id: 1, name: "Major Hotel Chains", logo: "Hotel Partners" },
   { id: 2, name: "Pharmaceutical Giants", logo: "Pharma Corp" },
   { id: 3, name: "Food Processing Units", logo: "Food Industries" },
-  { id: 4, name: "Sports Complexes", logo: "Sports Authority" }
+  { id: 4, name: "Sports Complexes", logo: "Sports Authority" },
 ];
 
 export const GALLERY_ITEMS = [
-  { id: 1, category: 'Heating', src: 'https://picsum.photos/id/10/800/600', title: 'Pool Heating Installation' },
-  { id: 2, category: 'Heating', src: 'https://picsum.photos/id/11/800/600', title: 'Resort Swimming Pool' },
-  { id: 3, category: 'Dehumidification', src: 'https://picsum.photos/id/866/800/600', title: 'Industrial Facility' },
-  { id: 4, category: 'Dehumidification', src: 'https://picsum.photos/id/60/800/600', title: 'Office Ventilation' },
-  { id: 5, category: 'Dehumidification', src: 'https://picsum.photos/id/20/800/600', title: 'Product Storage' },
-  { id: 6, category: 'Heating', src: 'https://picsum.photos/id/28/800/600', title: 'Hotel Rooftop Pool' },
+  {
+    id: 1,
+    category: "Heating",
+    src: "https://picsum.photos/id/10/800/600",
+    title: "Pool Heating Installation",
+  },
+  {
+    id: 2,
+    category: "Heating",
+    src: "https://picsum.photos/id/11/800/600",
+    title: "Resort Swimming Pool",
+  },
+  {
+    id: 3,
+    category: "Dehumidification",
+    src: "https://picsum.photos/id/866/800/600",
+    title: "Industrial Facility",
+  },
+  {
+    id: 4,
+    category: "Dehumidification",
+    src: "https://picsum.photos/id/60/800/600",
+    title: "Office Ventilation",
+  },
+  {
+    id: 5,
+    category: "Dehumidification",
+    src: "https://picsum.photos/id/20/800/600",
+    title: "Product Storage",
+  },
+  {
+    id: 6,
+    category: "Heating",
+    src: "https://picsum.photos/id/28/800/600",
+    title: "Hotel Rooftop Pool",
+  },
 ];

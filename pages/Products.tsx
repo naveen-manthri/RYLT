@@ -175,7 +175,7 @@ const Products: React.FC = () => {
                       <tbody className="divide-y divide-gray-100">
                         {product.models.map((model, i) => (
                           <tr key={i} className="hover:bg-gray-50">
-                            <td className="px-6 py-4 font-bold text-black">{model.name}</td>
+                            <td className="px-6 py-4 font-bold text-black whitespace-nowrap">{model.name}</td>
                              {model.specs.map((s, j) => (
                                <td key={j} className="px-6 py-4 text-gray-600 whitespace-nowrap">{s.value}</td>
                              ))}

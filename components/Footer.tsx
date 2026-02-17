@@ -51,15 +51,32 @@ const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="text-rylt-green flex-shrink-0 mt-1" size={18} />
-                <span className="text-gray-400 text-sm">{COMPANY_INFO.address}</span>
+                <a 
+                  href="https://www.google.com/maps/place/RYLT+ENERGY/@17.4713848,78.5962559,17z/data=!3m1!4b1!4m6!3m5!1s0x3bcb9d4f4c101fa9:0xf6b30e81759cbf05!8m2!3d17.4713848!4d78.5962559!16s%2Fg%2F11vb0hvgp9"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 text-sm hover:text-rylt-green transition-colors"
+                >
+                  {COMPANY_INFO.address}
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="text-rylt-green flex-shrink-0" size={18} />
-                <span className="text-gray-400 text-sm">{COMPANY_INFO.phone}</span>
+                <a 
+                  href={`tel:${COMPANY_INFO.phone.replace(/[^0-9+]/g, '')}`}
+                  className="text-gray-400 text-sm hover:text-rylt-green transition-colors"
+                >
+                  {COMPANY_INFO.phone}
+                </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="text-rylt-green flex-shrink-0" size={18} />
-                <span className="text-gray-400 text-sm">{COMPANY_INFO.email}</span>
+                <a 
+                  href={`mailto:${COMPANY_INFO.email}`}
+                  className="text-gray-400 text-sm hover:text-rylt-green transition-colors"
+                >
+                  {COMPANY_INFO.email}
+                </a>
               </li>
             </ul>
           </div>
