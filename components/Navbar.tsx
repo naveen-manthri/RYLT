@@ -28,9 +28,9 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link to="/" className="flex items-center gap-2" onClick={closeMenu}>
-              <div className="bg-black text-white p-1 rounded-sm">
-                <Zap size={28} className="text-rylt-green" />
-              </div>
+              {/* <div className="bg-black text-white p-1 rounded-sm">
+                <Zap size={28} className="text-rylt-green" /
+              </div> */}
               <span className="font-bold text-2xl tracking-tighter">
                 RYL<span className="text-rylt-green">T</span>
               </span>
