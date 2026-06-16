@@ -20,7 +20,7 @@ export const PRODUCTS: Product[] = [
     category: "Heating",
     description:
       "Advanced air-source refrigeration cycle technology designed to deliver efficient and eco-friendly pool heating. Saves up to 70% energy compared to traditional electric or gas heaters.",
-    image: "https://picsum.photos/id/10/800/600", // Nature/Water vibe
+    image: "/images/pool-heat-pump.png",
     features: [
       "Titanium Tube Heat Exchanger (Corrosion Resistant)",
       "Smart Wi-Fi Controller",
@@ -115,7 +115,7 @@ export const PRODUCTS: Product[] = [
     category: "Dehumidification",
     description:
       "Specialized dehumidifiers designed for the food and confectionery industry. Prevents moisture damage, stickiness, and sugar bloom in chocolates and candies.",
-    image: "https://picsum.photos/id/866/800/600", // Industrial/clean vibe
+    image: "/images/industrial-dehumidifier.png",
     features: [
       "Prevents Sugar/Fat Bloom",
       "Food-Safe Materials",
@@ -223,7 +223,7 @@ export const PRODUCTS: Product[] = [
     category: 'Heating',
     description:
       'Energy-efficient commercial heat pump water heating system designed for hostels, hospitals, lodges, restaurants and spa facilities. Operates in ambient temperatures from 15°C to 55°C with maximum water temperature up to 75°C and delivers high COP up to 5.0 for maximum savings.',
-    image: 'https://picsum.photos/id/60/800/600', // Tech/Office/Clean vibe
+    image: '/images/commercial-heat-pump.png',
     features: [
       'Save up to 60% on hot water bills',
       'High COP up to 5.0',
@@ -393,37 +393,37 @@ export const GALLERY_ITEMS = [
   {
     id: 1,
     category: "Heating",
-    src: "https://picsum.photos/id/10/800/600",
+    src: "/images/gallery-img1.png",
     title: "Pool Heating Installation",
   },
   {
     id: 2,
     category: "Heating",
-    src: "https://picsum.photos/id/11/800/600",
+    src: "/images/gallery-img2.png",
     title: "Resort Swimming Pool",
   },
   {
     id: 3,
     category: "Dehumidification",
-    src: "https://picsum.photos/id/866/800/600",
+    src: "/images/gallery-img3.png",
     title: "Industrial Facility",
   },
   {
     id: 4,
     category: "Dehumidification",
-    src: "https://picsum.photos/id/60/800/600",
+    src: "/images/gallery-img4.png",
     title: "Office Ventilation",
   },
   {
     id: 5,
     category: "Dehumidification",
-    src: "https://picsum.photos/id/20/800/600",
+    src: "/images/gallery-img5.png",
     title: "Product Storage",
   },
   {
     id: 6,
     category: "Heating",
-    src: "https://picsum.photos/id/28/800/600",
+    src: "/images/gallery-img6.png",
     title: "Hotel Rooftop Pool",
   },
 ];
