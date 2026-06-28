@@ -21,6 +21,10 @@ export const PRODUCTS: Product[] = [
     description:
       "Advanced air-source refrigeration cycle technology designed to deliver efficient and eco-friendly pool heating. Saves up to 70% energy compared to traditional electric or gas heaters.",
     image: "/images/pool-heat-pump.png",
+    brochure: {
+      url: "/brochures/Swimming Pool Heat Pump.pdf",
+      filename: "Swimming Pool Heat Pump.pdf",
+    },
     features: [
       "Titanium Tube Heat Exchanger (Corrosion Resistant)",
       "Smart Wi-Fi Controller",
@@ -72,7 +76,7 @@ export const PRODUCTS: Product[] = [
         ],
       },
       {
-        name: "54kW",
+        name: "55kW",
         specs: [
           { label: "Rated Input Power", value: "8.1 kW" },
           { label: "Power Supply", value: "415/3/50 V/Ph/Hz" },
@@ -116,6 +120,10 @@ export const PRODUCTS: Product[] = [
     description:
       "Specialized dehumidifiers designed for the food and confectionery industry. Prevents moisture damage, stickiness, and sugar bloom in chocolates and candies.",
     image: "/images/industrial-dehumidifier.png",
+    brochure: {
+      url: "/brochures/Industrial Dehumidifier.pdf",
+      filename: "Industrial Dehumidifier.pdf",
+    },
     features: [
       "Prevents Sugar/Fat Bloom",
       "Food-Safe Materials",
@@ -224,6 +232,10 @@ export const PRODUCTS: Product[] = [
     description:
       'Energy-efficient commercial heat pump water heating system designed for hostels, hospitals, lodges, restaurants and spa facilities. Operates in ambient temperatures from 15°C to 55°C with maximum water temperature up to 75°C and delivers high COP up to 5.0 for maximum savings.',
     image: '/images/commercial-heat-pump.png',
+    brochure: {
+      url: "/brochures/Commercial Heat Pump.pdf",
+      filename: "Commercial Heat Pump.pdf",
+    },
     features: [
       'Save up to 60% on hot water bills',
       'High COP up to 5.0',
@@ -364,21 +376,21 @@ export const TEAM: TeamMember[] = [
     name: "Engineering Lead",
     role: "Head of R&D",
     bio: "Expert in thermodynamic systems with 15+ years in HVAC innovation.",
-    image: "https://picsum.photos/id/1062/400/400",
+    image: "/images/Engineering Lead.png",
   },
   {
     id: 2,
     name: "Operations Manager",
     role: "Production Head",
     bio: "Ensures global quality standards and 'Make in India' excellence.",
-    image: "https://picsum.photos/id/338/400/400",
+    image: "/images/Operations Manager.png",
   },
   {
     id: 3,
     name: "Sales Director",
     role: "Customer Success",
     bio: "Dedicated to providing tailored energy solutions for industrial clients.",
-    image: "https://picsum.photos/id/669/400/400",
+    image: "/images/Sales Director.png",
   },
 ];
 
@@ -393,37 +405,113 @@ export const GALLERY_ITEMS = [
   {
     id: 1,
     category: "Heating",
+    type: "image",
     src: "/images/gallery-img1.png",
     title: "Pool Heating Installation",
+    description: "Installation of a high-efficiency pool heat pump for year-round comfort.",
   },
   {
     id: 2,
     category: "Heating",
+    type: "image",
     src: "/images/gallery-img2.png",
     title: "Resort Swimming Pool",
+    description: "Luxury resort pool solution optimized for energy savings and comfort.",
   },
   {
     id: 3,
     category: "Dehumidification",
+    type: "image",
     src: "/images/gallery-img3.png",
     title: "Industrial Facility",
+    description: "Climate control installation tailored for demanding industrial environments.",
   },
   {
     id: 4,
     category: "Dehumidification",
+    type: "image",
     src: "/images/gallery-img4.png",
     title: "Office Ventilation",
+    description: "Workplace humidity control project for a modern office space.",
   },
   {
     id: 5,
     category: "Dehumidification",
+    type: "image",
     src: "/images/gallery-img5.png",
     title: "Product Storage",
+    description: "Protected storage environment for sensitive goods and materials.",
   },
   {
     id: 6,
     category: "Heating",
+    type: "image",
     src: "/images/gallery-img6.png",
     title: "Hotel Rooftop Pool",
+    description: "Rooftop pool heating installation for a high-end hospitality property.",
+  },
+  {
+    id: 7,
+    category: "Others",
+    type: "image",
+    src: "/images/others-img1.png",
+    title: "Solar Pool Setup",
+    description: "Hybrid solar-assisted pool heating visualization for eco-conscious sites.",
+  },
+  {
+    id: 8,
+    category: "Others",
+    type: "image",
+    src: "/images/others-img2.png",
+    title: "Warehouse Comfort",
+    description: "Low-energy humidity control concept for commercial storage spaces.",
+  },
+  {
+    id: 9,
+    category: "Others",
+    type: "image",
+    src: "/images/others-img3.png",
+    title: "Corporate Wellness",
+    description: "Heat pump solution for office wellness centers and recreational pools.",
+  },
+  {
+    id: 10,
+    category: "Others",
+    type: "image",
+    src: "/images/others-img4.png",
+    title: "Gym Pool Upgrade",
+    description: "Energy-smart heating system for fitness center swimming pools.",
+  },
+  {
+    id: 11,
+    category: "Others",
+    type: "video",
+    src: "/images/others-video1.png",
+    title: "Video: Heat Pump Showcase",
+    description: "Short overview of our heat pump installation process.",
+  },
+  {
+    id: 12,
+    category: "Others",
+    type: "video",
+    src: "/images/others-video2.png",
+    title: "Video: Dehumidifier Demo",
+    description: "Product demo of our industrial dehumidifier system.",
+  },
+  {
+    id: 13,
+    category: "Others",
+    type: "video",
+    src: "/images/others-video3.png",
+    title: "Video: Resort Case Study",
+    description: "Customer case study covering a resort pool heat pump project.",
+  },
+  {
+    id: 14,
+    category: "Others",
+    type: "video",
+    src: "/images/others-video4.png",
+    title: "Video: Warehouse Climate Control",
+    description: "Visual story of our warehouse humidity management installation.",
   },
 ];

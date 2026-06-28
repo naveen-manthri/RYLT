@@ -12,7 +12,7 @@ const Gallery: React.FC = () => {
     ? GALLERY_ITEMS 
     : GALLERY_ITEMS.filter(item => item.category === filter);
 
-  const categories = ['All', 'Heating', 'Dehumidification'];
+  const categories = ['All', 'Heating', 'Dehumidification', 'Others'];
 
   return (
     <div className="animate-in fade-in duration-500 min-h-screen bg-white">
@@ -30,14 +30,14 @@ const Gallery: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Filter Controls */}
         <div className="flex justify-center mb-12">
-          <div className="inline-flex bg-gray-100 p-1 rounded-full">
+          <div className="inline-flex bg-gray-100 p-1 rounded-full space-x-2">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setFilter(cat)}
                 className={`px-6 py-2 rounded-full text-sm font-medium transition-all ${
                   filter === cat
-                    ? 'bg-black text-white shadow-lg transform scale-105'
+                    ? 'bg-black text-white shadow-lg'
                     : 'text-gray-500 hover:text-gray-900 hover:bg-gray-200'
                 }`}
               >
@@ -47,7 +47,6 @@ const Gallery: React.FC = () => {
           </div>
         </div>
 
-        {/* Grid Container */}
         {filteredItems.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredItems.map((item) => (
@@ -64,15 +63,16 @@ const Gallery: React.FC = () => {
                 />
                 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
                    <span className="text-rylt-green text-xs font-bold uppercase tracking-wider mb-2">
-                      {item.category}
+                     {item.category}
                    </span>
                    <h3 className="text-white font-bold text-lg leading-tight">{item.title}</h3>
+                   <p className="text-white/80 text-sm mt-2 leading-relaxed">{item.description}</p>
                    <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm p-2 rounded-full text-white opacity-0 group-hover:opacity-100 transition-all delay-100 hover:bg-white hover:text-black">
-                     <ZoomIn size={20} />
+                    <ZoomIn size={20} />
                    </div>
-                </div>
+                 </div>
               </div>
             ))}
           </div>

@@ -187,7 +187,7 @@ const Home: React.FC = () => {
           <div className="flex justify-between items-end mb-12">
             <div>
               <span className="text-rylt-green font-semibold uppercase tracking-wider text-sm">Our Innovations</span>
-              <h2 className="text-3xl font-bold mt-2">Featured Products</h2>
+              <h2 className="text-3xl font-bold mt-2">Our Products</h2>
             </div>
             <Link to="/products" className="hidden md:flex items-center text-rylt-green hover:text-black font-semibold transition-colors">
               View All Products <ArrowRight size={18} className="ml-2" />
