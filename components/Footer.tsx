@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Facebook, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import { COMPANY_INFO } from '../constants';
 
 const Footer: React.FC = () => {
@@ -18,9 +18,9 @@ const Footer: React.FC = () => {
               {COMPANY_INFO.tagline}. Pioneering sustainable and innovative thermal solutions for a greener future.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-rylt-green transition-colors"><Linkedin size={20} /></a>
-              <a href="#" className="text-gray-400 hover:text-rylt-green transition-colors"><Facebook size={20} /></a>
-              <a href="#" className="text-gray-400 hover:text-rylt-green transition-colors"><Twitter size={20} /></a>
+              <a href="https://www.linkedin.com/company/rylt-energy/" className="text-gray-400 hover:text-rylt-green transition-colors"><Linkedin size={20} /></a>
+              <a href="https://www.instagram.com/ryltenergy?utm_source=qr&igsh=aTZkaDdtYmxvanlj" className="text-gray-400 hover:text-rylt-green transition-colors"><Instagram size={20} /></a>
+              <a href="https://www.youtube.com" className="text-gray-400 hover:text-rylt-green transition-colors"><Youtube size={20} /></a>
             </div>
           </div>
 
