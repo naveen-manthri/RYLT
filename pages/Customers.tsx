@@ -19,9 +19,9 @@ const Customers: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
+        <div className="flex gap-8 mb-20 overflow-x-auto scroll-smooth -mx-4 px-4">
            {CUSTOMERS.map((customer) => (
-             <div key={customer.id} className="bg-white p-8 rounded-xl border border-gray-300 border-1.8 shadow-sm flex flex-col items-center justify-center aspect-square text-center hover:shadow-md transition-shadow">
+             <div key={customer.id} className="bg-white p-8 rounded-xl border border-gray-300 shadow-sm flex flex-col items-center justify-center min-w-[220px] sm:min-w-[260px] md:min-w-0 text-center hover:shadow-md transition duration-300">
                 <div className="bg-gray-100 p-4 rounded-full mb-4">
                   {/* Generic icons for demo purposes since we don't have real logos */}
                   {customer.id === 1 && <Building2 size={32} className="text-gray-600" />}
