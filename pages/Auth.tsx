@@ -26,9 +26,9 @@ const Auth: React.FC = () => {
       />
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Link to="/" className="flex justify-center items-center gap-2 mb-6">
-          <div className="bg-black text-white p-2 rounded-lg">
+          {/* <div className="bg-black text-white p-2 rounded-lg">
             <Zap size={32} className="text-rylt-green" />
-          </div>
+          </div> */}
           <span className="font-bold text-3xl tracking-tighter text-gray-900">
             RYL<span className="text-rylt-green">T</span>
           </span>

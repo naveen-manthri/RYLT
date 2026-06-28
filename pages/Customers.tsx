@@ -21,7 +21,7 @@ const Customers: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
            {CUSTOMERS.map((customer) => (
-             <div key={customer.id} className="bg-white p-8 rounded-xl border border-gray-100 shadow-sm flex flex-col items-center justify-center aspect-square text-center hover:shadow-md transition-shadow">
+             <div key={customer.id} className="bg-white p-8 rounded-xl border border-gray-300 border-1.8 shadow-sm flex flex-col items-center justify-center aspect-square text-center hover:shadow-md transition-shadow">
                 <div className="bg-gray-100 p-4 rounded-full mb-4">
                   {/* Generic icons for demo purposes since we don't have real logos */}
                   {customer.id === 1 && <Building2 size={32} className="text-gray-600" />}

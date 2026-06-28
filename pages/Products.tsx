@@ -46,14 +46,14 @@ const Products: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center justify-between py-4 gap-4">
             
             {/* Tabs */}
-            <div className="flex space-x-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0">
+            <div className="flex space-x-2 overflow-x-auto w-full md:w-auto" style={{ paddingTop: '1.5px', paddingBottom: '1.5px' }}>
               {['All', 'Heating', 'Dehumidification'].map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat as any)}
                   className={`px-6 py-2 rounded-full font-medium text-sm whitespace-nowrap transition-all ${
                     activeCategory === cat 
-                      ? 'bg-rylt-green text-black shadow-md' 
+                      ? 'bg-rylt-green text-black' 
                       : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
                   }`}
                 >
@@ -115,9 +115,13 @@ const Products: React.FC = () => {
                   />
                 </div>
                 <div className="flex gap-4">
-                   <button className="flex-1 bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2">
+                   <a
+                     href={product.brochure?.url}
+                     download={product.brochure?.filename}
+                     className="flex-1 bg-black text-white py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
+                   >
                       <Download size={18} /> Brochure
-                   </button>
+                   </a>
                    <a href="#contact" className="flex-1 border-2 border-black text-black py-3 rounded-lg font-medium hover:bg-black hover:text-white transition-colors text-center">
                       Enquire Now
                    </a>

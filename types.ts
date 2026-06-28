@@ -16,6 +16,10 @@ export interface Product {
   features: string[];
   applications: string[];
   image: string;
+  brochure?: {
+    url: string;
+    filename: string;
+  };
   models: ProductModel[];
 }
 
