@@ -1,6 +1,6 @@
 import React from 'react';
 import { CUSTOMERS } from '../constants';
-import { Building2, Factory, Warehouse, Trophy } from 'lucide-react';
+import { Building2, Factory, Warehouse, Trophy, Droplet } from 'lucide-react';
 import SEO from '../components/SEO';
 import CaseStudy from '../components/CaseStudy';
 
@@ -28,6 +28,7 @@ const Customers: React.FC = () => {
                   {customer.id === 2 && <Factory size={32} className="text-gray-600" />}
                   {customer.id === 3 && <Warehouse size={32} className="text-gray-600" />}
                   {customer.id === 4 && <Trophy size={32} className="text-gray-600" />}
+                  {customer.id === 5 && <Droplet size={32} className="text-gray-600" />}
                 </div>
                 <h3 className="font-bold text-lg">{customer.name}</h3>
                 <span className="text-xs text-gray-500 mt-2 uppercase tracking-wide">{customer.logo}</span>

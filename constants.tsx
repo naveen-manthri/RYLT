@@ -399,6 +399,7 @@ export const CUSTOMERS: Customer[] = [
   { id: 2, name: "Pharmaceutical Giants", logo: "Pharma Corp" },
   { id: 3, name: "Food Processing Units", logo: "Food Industries" },
   { id: 4, name: "Sports Complexes", logo: "Sports Authority" },
+  { id: 5, name: "Swimming Pool Operators", logo: "Luxury Resorts" },
 ];
 
 export const GALLERY_ITEMS = [
